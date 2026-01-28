@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>¿Quieres ser mi San Valentín?</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background: linear-gradient(180deg, #ffe6ee, #ffffff);
+  color: #4a2c2a;
+}
+
+.carta {
+  max-width: 720px;
+  margin: auto;
+  padding: 20px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+h1 {
+  text-align: center;
+  color: #c2185b;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.galeria {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  margin: 20px 0;
+  padding-bottom: 10px;
+}
+
+.galeria img {
+  width: 220px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 16px;
+  flex-shrink: 0;
+}
+
+.pregunta {
+  text-align: center;
+  font-size: 26px;
+  color: #c2185b;
+  margin: 30px 0 20px;
+  font-weight: bold;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  font-size: 18px;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  background: #f48fb1;
+  color: white;
+  font-weight: bold;
+  transition: transform 0.2s, background 0.2s;
+}
+
+button:hover {
+  background: #c2185b;
+  transform: scale(1.03);
+}
+
+#sorpresa {
+  display: none;
+  margin-top: 30px;
+  padding: 22px;
+  background: #ffe6ee;
+  border-radius: 16px;
+  text-align: center;
+  font-size: 20px;
+  animation: aparecer 0.6s ease;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.firma {
+  margin-top: 35px;
+  text-align: right;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* 📱 Adaptado a celular */
+@media (max-width: 600px) {
+  p { font-size: 16px; }
+  .pregunta { font-size: 22px; }
+  .galeria img { width: 180px; height: 250px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🎶 Música -->
+<audio id="musica" loop>
+  <source src="reina_saiko.mp3" type="audio/mpeg">
+</audio>
+
+<div class="carta">
+  <h1>Mi amor</h1>
+
+  <p>
+    Hoy me senté a escribirte porque hay preguntas que no se pueden hacer de cualquier manera…
+    y esta es una de ellas.
+  </p>
+
+  <p>
+    Desde que llegaste a mi vida, todo cambió para bien.
+    Cada momento contigo es un recuerdo que quiero guardar para siempre.
+  </p>
+
+  <!-- 📸 Fotos -->
+  <div class="galeria">
+    <img src="foto1.jpg" alt="Nosotros">
+    <img src="foto2.jpg" alt="Nosotros">
+    <img src="foto3.jpg" alt="Nosotros">
+  </div>
+
+  <div class="pregunta">
+    ¿Quieres ser mi San Valentín?
+  </div>
+
+  <!-- 💖 Opciones -->
+  <button onclick="aceptar()">MIL VECES SÍ, OBVIO 💘</button>
+  <button onclick="aceptar()">ME MUERO DE LA EMOCIÓN ❤️</button>
+  <button onclick="aceptar()">SÍ, CON FINAL FELIZ ❤️‍🔥</button>
+
+  <!-- 🎁 Mensaje sorpresa -->
+  <div id="sorpresa">
+    ✨ Sabía que dirías que sí ✨<br><br>
+    Prometo cuidarte, hacerte reír,<br>
+    apoyarte siempre y seguir escribiendo<br>
+    nuestra historia juntos.<br><br>
+    ❤️ Con final feliz… y muchos capítulos más ❤️
+  </div>
+
+  <div class="firma">
+    Con todo mi amor,<br>
+    Armando VR
+  </div>
+</div>
+
+<script>
+function aceptar() {
+  document.getElementById("sorpresa").style.display = "block";
+  document.getElementById("musica").play();
+}
+</script>
+
+</body>
+</html>
